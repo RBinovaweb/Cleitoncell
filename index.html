@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/png" href="img/Logo.png">
+<title>Cleiton Cel</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!-- Menu -->
+<header>
+  <nav>
+    <a  href="#"><img src="img/Logo.png" class="logo" alt="Home"></a>
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+      <li><a href="pages/iphone.html">iPhone</a></li>
+      <li><a href="pages/xiaomi.html">Xiaomi / Realmi</a></li>
+      <li><a href="pages/jbl.html">JBL</a></li>
+      <li><a href="pages/acessorios.html">Acessórios</a></li>
+      <li><a href="pages/stanley.html">Stanley</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script src="js/mobile-navbar.js"></script>
+<!-- Fim do Menu -->
+
+<br><br><br><br><br>
+<center>
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="img/banner teste1.png" alt="Imagem 1">
+  </div>
+  <div class="slide fade">
+    <img src="img/banner teste2.png" alt="Imagem 2">
+  </div>
+  <div class="slide fade">
+    <img src="img/banner teste3.png" alt="Imagem 3">
+  </div>
+</div>
+</center>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 9000); 
+}
+</script>
+
+<!-- Começo da Página -->
+<br><br><br>
+<div class="container">
+  <h3>Mais procurados:</h3>
+  <div class="carousel" id="carousel">
+    
+    <div class="product">
+      <center><img src="img/i11.png" alt="Produto 2"></center><br><br>
+      <h2>iPhone 11 64gb</h2>
+      <p>Semi-Novo</p>
+      <span class="price">R$ 1780,00</span>
+      <button onclick="redirecionarParaEndereco('iPhone Xr 64gb')">Comprar</button>
+  </div>
+
+  <div class="product">
+    <center> <img src="img/i13.png" alt="Produto 2"></center><br><br>
+    <h2>iPhone 13 128gb</h2>
+    <p>Semi-Novo</p>
+     <span class="price">R$ 2900,00</span>
+     <button onclick="redirecionarParaEndereco('iPhone 13 128gb')">Comprar</button>
+ </div>
+ <div class="product">
+  <center> <img src="img/i15.png" alt="Produto 2"></center><br><br>
+  <h2>iPhone 15 128gb</h2>
+  <p>Lacrado</p>
+   <span class="price">R$ 4500,00</span>
+   <button onclick="redirecionarParaEndereco('iPhone 15 128gb')">Comprar</button>
+</div>
+  </div>
+</div>
+
+<script>
+function redirecionarParaEndereco(nomeProduto) {
+
+    window.location.href = "pages/endereco.html?produto=" + encodeURIComponent(nomeProduto);
+}
+</script>
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-info">
+          <p>Endereço: <a href="http://maps.app.goo.gl/X1QmHi3awGj8RHcS8" target="_blank" rel="noopener noreferrer">Avenida Getúlio Vargas, 370,Centro.</a><br>
+          Paulo Afonso - BA</p>
+         <p>Siga-nos: <a href="https://www.instagram.com/cleitoncel/">@cleitoncel</a></p>
+      </div>
+      <div class="footer-payment">
+          <p>Formas de Pagamento:</p><br>
+          <ul>
+              <li><a href="#"><img src="img/visa.jpeg" alt="Visa"></a></li>
+              <li><a href="#"><img src="img/mastercard.png" alt="Mastercard"></a></li>
+              <li><a href="#"><img src="img/elo.png" alt="Elo"></a></li>
+              <li><a href="#"><img src="img/pix.png" alt="Pix"></a></li>
+          </ul>
+      </div>
+      <div class="footer-reputation">
+          <p>Somos uma loja confiável, com produtos de qualidade e atendimento excepcional!</p>
+          <p>Venha nos visitar!</p>
+      </div>
+  </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/png" href="img/Logo.png">
+<title>Produtos JBL</title>
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<!-- Menu -->
+<header>
+  <nav>
+    <a  href="../index.html"><img src="../img/Logo.png" class="logo" alt="Home"></a>
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+      <li><a href="../pages/iphone.html">iPhone</a></li>
+      <li><a href="../pages/xiaomi.html">Xiaomi / Realmi</a></li>
+      <li><a href="acessorios.html">Acessórios</a></li>
+      <li><a href="stanley.html">Stanley</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script src="../js/mobile-navbar.js"></script>
+<!-- Fim do Menu -->
+
+<br><br><br><br>
+
+
+<!-- Começo da Página -->
+<br>
+<div class="container">
+  <div class="carousel" id="carousel">
+    
+    <div class="product">
+      <center> <img src="../img/JBLBOOMBOX3.png" alt="Produto 2"></center><br><br>
+       <h2>JBL Boombox 3</h2>
+       <p>Original JBL</p>
+       <span class="price">R$2200,00</span>
+       <button onclick="redirecionarParaEndereco('JBL Boombox 3')">Comprar</button>
+   </div>
+
+      <div class="product">
+         <center> <img src="../img/JBLPARTYBOX110.png" alt="Produto 2"></center><br><br>
+          <h2>JBL Partybox 110</h2>
+          <p>Original JBL</p>
+          <span class="price">R$2300,00</span>
+          <button onclick="redirecionarParaEndereco('JBL Partybox 110')">Comprar</button>
+      </div>
+      <div class="product">
+        <center><img src="../img/JBLPartyBox310.png" alt="Produto 2"></center><br><br>
+        <h2>JBL Partybox 310</h2>
+        <p>Original JBL</p>
+        <span class="price">R$3300,00</span>
+        <button onclick="redirecionarParaEndereco('JBL Partybox 310')">Comprar</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="carousel" id="carousel">
+      
+      <div class="product">
+        <center> <img src="../img/JBLQuantum100.png" alt="Produto 2"></center><br>
+         <h2>JBL Quantum 100</h2>
+         <p>Original JBL</p>
+         <span class="price">R$250,00</span>
+         <button onclick="redirecionarParaEndereco('JBL Quantum 100')">Comprar</button>
+     </div>
+  
+        <div class="product">
+           <center> <img src="../img/JBL520BT.png" alt="Produto 2"></center><br>
+            <h2>JBL Tune 520BT</h2>
+            <p>Original JBL</p>
+            <span class="price">R$300,00</span>
+            <button onclick="redirecionarParaEndereco('JBL Tune 520BT')">Comprar</button>
+        </div>
+        <div class="product">
+          <center><img src="../img/JBLWaveBuds.png" alt="Produto 2"></center><br>
+          <h2>JBL Wave Buds</h2>
+          <p>Original JBL</p>
+          <span class="price">R$300,00</span>
+          <button onclick="redirecionarParaEndereco('JBL Wave Buds')">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="carousel" id="carousel">
+      
+      <div class="product">
+        <center> <img src="../img/C50.png" alt="Produto 2"></center><br>
+         <h2>Fone de Ouvido C50HI</h2>
+         <p>Original JBL</p>
+         <span class="price">R$80,00</span>
+         <button onclick="redirecionarParaEndereco('Fone de Ouvido C50HI')">Comprar</button>
+     </div>
+  
+        <div class="product">
+           <center> <img src="../img/JBLPBWIRELESSMIC.png" alt="Produto 2"></center><br>
+            <h2>JBL Wireless Microphone Set</h2>
+            <p>Original JBL</p>
+            <span class="price">R$650,00</span>
+            <button onclick="redirecionarParaEndereco('JBL Wireless Microphone Set')">Comprar</button>
+        </div>
+        <div class="product">
+          <center><img src="../img/jblgo3.png" alt="Produto 2"></center><br>
+          <h2>JBL Go 3</h2>
+          <p>Original JBL</p>
+          <span class="price">R$300,00</span>
+          <button onclick="redirecionarParaEndereco('JBL Go 3')">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+function redirecionarParaEndereco(nomeProduto) {
+
+    window.location.href = "../pages/endereco.html?produto=" + encodeURIComponent(nomeProduto);
+}
+</script>
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-info">
+          <p>Endereço: <a href="http://maps.app.goo.gl/X1QmHi3awGj8RHcS8" target="_blank" rel="noopener noreferrer">Avenida Getúlio Vargas, 370,Centro.</a><br>
+          Paulo Afonso - BA</p>
+          <p>Siga-nos: <a href="https://www.instagram.com/cleitoncel/">@cleitoncel</a></p>
+      </div>
+      <div class="footer-payment">
+          <p>Formas de Pagamento:</p><br>
+          <ul>
+              <li><a href="#"><img src="../img/visa.jpeg" alt="Visa"></a></li>
+              <li><a href="#"><img src="../img/mastercard.png" alt="Mastercard"></a></li>
+              <li><a href="#"><img src="../img/elo.png" alt="Elo"></a></li>
+              <li><a href="#"><img src="../img/pix.png" alt="Pix"></a></li>
+          </ul>
+      </div>
+      <div class="footer-reputation">
+          <p>Somos uma loja confiável, com produtos de qualidade e atendimento excepcional!</p>
+          <p>Venha nos visitar!</p>
+      </div>
+  </div>
+  </footer>
+
+</body>
+</html>

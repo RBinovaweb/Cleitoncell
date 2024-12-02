@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/png" href="img/Logo.png">
+<title>Produtos Stanley</title>
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<!-- Menu -->
+<header>
+  <nav>
+    <a  href="../index.html"><img src="../img/Logo.png" class="logo" alt="Home"></a>
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+      <li><a href="../pages/iphone.html">iPhone</a></li>
+      <li><a href="../pages/xiaomi.html">Xiaomi / Realmi</a></li>
+      <li><a href="jbl.html">JBL</a></li>
+      <li><a href="acessorios.html">Acessórios</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script src="../js/mobile-navbar.js"></script>
+<!-- Fim do Menu -->
+
+<br><br><br><br>
+
+
+<!-- Começo da Página -->
+<br>
+<div class="container">
+  <div class="carousel" id="carousel">
+    
+    <div class="product">
+      <center> <img src="../img/stanleytampa.PNG" alt="Produto 2"></center><br><br>
+       <h2>COPOS STANLEY C/TAMPA 470ml</h2>
+       <p>Original Stanley</p>
+       <span class="price">R$150,00</span>
+       <button onclick="redirecionarParaEndereco('COPOS STANLEY C/TAMPA 470ml')">Comprar</button>
+   </div>
+
+      <div class="product">
+         <center> <img src="../img/stanleycuia.PNG" alt="Produto 2"></center><br><br>
+          <h2>CUIA C/TAMPA STANLEY 295ml</h2>
+          <p>Original Stanley</p>
+          <span class="price">R$180,00</span>
+          <button onclick="redirecionarParaEndereco('CUIA C/TAMPA STANLEY 295ml')">Comprar</button>
+      </div>
+      <div class="product">
+        <center><img src="../img/stanleychopp.PNG" alt="Produto 2"></center><br><br>
+        <h2>COPO STANLEY PARA CHOPP 380ml</h2>
+        <p>Original Stanley</p>
+        <span class="price">R$200,00</span>
+        <button onclick="redirecionarParaEndereco('COPO STANLEY PARA CHOPP 380ml')">Comprar</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="carousel" id="carousel">
+      
+      <div class="product">
+        <center> <img src="../img/stanleychopp400ml.PNG" alt="Produto 2"></center><br>
+         <h2>COPO STANLEY PARA CHOPP 440ml</h2>
+         <p>Original Stanley</p>
+         <span class="price">R$200,00</span>
+         <button onclick="redirecionarParaEndereco('COPO STANLEY PARA CHOPP 440ml')">Comprar</button>
+     </div>
+  
+        <div class="product">
+           <center> <img src="../img/stanley1e2l.PNG" alt="Produto 2"></center><br><br>
+            <h2>COPO STANLEY 1,2L</h2>
+            <p>Original Stanley</p>
+            <span class="price">R$330,00</span>
+            <button onclick="redirecionarParaEndereco('COPO STANLEY 1,2L')">Comprar</button>
+        </div>
+        <div class="product">
+          <center><img src="../img/garrafatermica.PNG" alt="Produto 2"></center><br>
+          <h2>GARRAFAS TÉRMICAS STANLEY 650ml</h2>
+          <p>Original Stanley</p>
+          <span class="price">R$270,00</span>
+          <button onclick="redirecionarParaEndereco('GARRAFAS TÉRMICAS STANLEY 650ml')">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="carousel" id="carousel">
+      
+      <div class="product">
+        <center> <img src="../img/garrafatermica710ml.PNG" alt="Produto 2"></center><br>
+         <h2>GARRAFAS TÉRMICAS STANLEY 710ml</h2>
+         <p>Original Stanley</p>
+         <span class="price">R$270,00</span>
+         <button onclick="redirecionarParaEndereco('GARRAFAS TÉRMICAS STANLEY 710ml')">Comprar</button>
+     </div>
+  
+        <div class="product">
+           <center> <img src="../img/garrafatermica880ml.PNG" alt="Produto 2"></center><br>
+            <h2>GARRAFAS TÉRMICAS STANLEY 880ml</h2>
+            <p>Original Stanley</p>
+            <span class="price">R$300,00</span>
+            <button onclick="redirecionarParaEndereco('GARRAFAS TÉRMICAS STANLEY 880ml')">Comprar</button>
+        </div>
+        <div class="product">
+          <center><img src="../img/garrafainfantil.PNG" alt="Produto 2"></center><br>
+          <h2>GARRAFA TÉRMICA INFANTIL STANLEY 500ml</h2>
+          <p>Original Stanley</p>
+          <span class="price">R$270,00</span>
+          <button onclick="redirecionarParaEndereco('GARRAFA TÉRMICA INFANTIL STANLEY 500ml')">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+function redirecionarParaEndereco(nomeProduto) {
+
+    window.location.href = "../pages/endereco.html?produto=" + encodeURIComponent(nomeProduto);
+}
+</script>
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-info">
+          <p>Endereço: <a href="http://maps.app.goo.gl/X1QmHi3awGj8RHcS8" target="_blank" rel="noopener noreferrer">Avenida Getúlio Vargas, 370,Centro.</a><br>
+          Paulo Afonso - BA</p>
+          <p>Siga-nos: <a href="https://www.instagram.com/cleitoncel/">@cleitoncel</a></p>
+      </div>
+      <div class="footer-payment">
+          <p>Formas de Pagamento:</p><br>
+          <ul>
+              <li><a href="#"><img src="../img/visa.jpeg" alt="Visa"></a></li>
+              <li><a href="#"><img src="../img/mastercard.png" alt="Mastercard"></a></li>
+              <li><a href="#"><img src="../img/elo.png" alt="Elo"></a></li>
+              <li><a href="#"><img src="../img/pix.png" alt="Pix"></a></li>
+          </ul>
+      </div>
+      <div class="footer-reputation">
+          <p>Somos uma loja confiável, com produtos de qualidade e atendimento excepcional!</p>
+          <p>Venha nos visitar!</p>
+      </div>
+  </div>
+  </footer>
+
+</body>
+</html>

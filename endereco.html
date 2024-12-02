@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/style.css">
+<title>Pedido</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <a href="../index.html"><img src="../img/Logo.png" class="logo" alt="Home"></a>
+        </nav>
+    </header><br><br><br><br><br><br><br><br><br>
+    <div class="bloco">
+        <div class="endereco1">
+            <h2 id="productName">Produto: Nome do Produto</h2>
+            <br><br>
+            <form id="orderForm">
+                <div class="form-group">
+                    <input type="text" id="customerName" name="customerName" placeholder="Nome Completo" required>
+                </div><br><br>
+                <div class="form-group">
+                    <input type="text" id="customerCPF" name="customerCPF" placeholder="CPF" required>
+                </div><br><br>
+                <div class="form-group">
+                    <input type="text" id="cep" name="cep" placeholder="CEP" required>
+                </div><br><br>
+                <div class="form-group">
+                    <input type="text" id="state" name="state" placeholder="Estado" required>
+                </div><br><br>
+                <div class="form-group">
+                    <input type="text" id="city" name="city" placeholder="Cidade" required>
+                </div><br><br>
+                <div class="form-group">
+                    <input type="text" id="address" name="address" placeholder="Endereço" required>
+                </div><br><br>
+                <div class="form-group">
+                    <input type="number" id="houseNumber" name="houseNumber" placeholder="Número da Casa" required>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="deliveryType">Retirada ou Entrega:</label>
+                    <select id="deliveryType" name="deliveryType" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="Retirada">Retirada</option>
+                        <option value="Entrega">Entrega</option>
+                    </select>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="paymentMethod">Método de Pagamento:</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="" disabled selected>Pagamento</option>
+                        <option value="PIX">PIX</option>
+                        <option value="Cartão">Cartão</option>
+                        <option value="À Vista">À Vista</option>
+                    </select>
+                </div><br><br>
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('cep').addEventListener('change', event => {
+            const cep = event.target.value;
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('state').value = data.uf;
+                    document.getElementById('city').value = data.localidade;
+                    document.getElementById('address').value = data.logradouro;
+                })
+                .catch(error => console.error('Erro ao obter dados do CEP', error));
+        });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get('produto');
+
+        if (productName) {
+            document.getElementById('productName').innerText = "Produto: " + productName;
+        }
+
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var customerName = document.getElementById('customerName').value;
+            var customerCPF = document.getElementById('customerCPF').value;
+            var cep = document.getElementById('cep').value;
+            var state = document.getElementById('state').value;
+            var city = document.getElementById('city').value;
+            var address = document.getElementById('address').value;
+            var houseNumber = document.getElementById('houseNumber').value;
+            var deliveryType = document.getElementById('deliveryType').value;
+            var paymentMethod = document.getElementById('paymentMethod').value;
+
+            var message = "Pedido:\n\n" +
+                "Produto: *" + productName + "*\n" +
+                "Nome do Cliente: *" + customerName + "*\n" +
+                "CPF do Cliente: *" + customerCPF + "*\n" +
+                "CEP: *" + cep + "*\n" +
+                "Estado: *" + state + "*\n" +
+                "Cidade: *" + city + "*\n" +
+                "Endereço: *" + address + "*\n" +
+                "Número da Casa: *" + houseNumber + "*\n" +
+                "Tipo de entrega: *" + deliveryType + "*\n" +
+                "Método de Pagamento: *" + paymentMethod + "*\n";
+
+            var whatsappNumber = '27997294468';
+            var whatsappLink = 'https://api.whatsapp.com/send?phone=' + whatsappNumber + '&text=' + encodeURIComponent(message);
+
+            window.open(whatsappLink, '_blank');
+        });
+    });
+    </script>
+<br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+  <div class="footer-container">
+      <div class="footer-info">
+          <p>Endereço: <a href="http://maps.app.goo.gl/X1QmHi3awGj8RHcS8" target="_blank" rel="noopener noreferrer">Avenida Getúlio Vargas, 370,Centro.</a><br>
+          Paulo Afonso - BA</p>
+          <p>Siga-nos: <a href="https://www.instagram.com/cleitoncel/">@cleitoncel</a></p>
+      </div>
+      <div class="footer-payment">
+          <p>Formas de Pagamento:</p><br>
+          <ul>
+              <li><a href="#"><img src="../img/visa.jpeg" alt="Visa"></a></li>
+              <li><a href="#"><img src="../img/mastercard.png" alt="Mastercard"></a></li>
+              <li><a href="#"><img src="../img/elo.png" alt="Elo"></a></li>
+              <li><a href="#"><img src="../img/pix.png" alt="Pix"></a></li>
+          </ul>
+      </div>
+      <div class="footer-reputation">
+          <p>Somos uma loja confiável, com produtos de qualidade e atendimento excepcional!</p>
+          <p>Venha nos visitar!</p>
+      </div>
+  </div>
+  </footer>
+
+
+
+</body>
+</html>

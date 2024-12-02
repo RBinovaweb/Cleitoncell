@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" type="imagex/png" href="img/Logo.png">
+<title>Xiaomi / Realmi</title>
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<!-- Menu -->
+<header>
+  <nav>
+    <a href="../index.html"><img src="../img/Logo.png" class="logo" alt="Home"></a>
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+      <li><a href="iphone.html">iPhone</a></li>
+      <li><a href="jbl.html">JBL</a></li>
+      <li><a href="acessorios.html">Acessórios</a></li>
+      <li><a href="stanley.html">Stanley</a></li>
+    </ul>
+  </nav>
+</header>
+<script src="../js/mobile-navbar.js"></script>
+<!-- Fim do Menu -->
+
+<!-- Começo da Página -->
+<br><br><br><br><br>
+<div class="container">
+  <div class="carousel" id="carousel">
+    
+      <div class="product">
+         <center> <img src="../img/redminote13pro5g.png" alt="Produto 1"></center><br><br>
+          <h2>Realmi Note 13 Pro 5g</h2>
+          <p>Lacrado</p>
+          <span class="price">R$1950,00</span>
+          <button onclick="redirecionarParaEndereco('Realmi Note 13 Pro 5g')">Comprar</button>
+      </div>
+
+      <div class="product">
+         <center> <img src="../img/redminote13pro.png" alt="Produto 2"></center><br><br>
+          <h2>Redmi Note 13 Pro 8/256gb</h2>
+          <p>Lacrado</p>
+          <span class="price">R$1600,00</span>
+          <button onclick="redirecionarParaEndereco('Redmi Note 13 Pro 8/256gb')">Comprar</button>
+      </div>
+      <div class="product">
+        <center><img src="../img/redminote13.png" alt="Produto 2"></center><br><br>
+        <h2>Redmi Note 13 8/256gb</h2>
+        <p>Lacrado</p>
+        <span class="price">R$1300,00</span>
+        <button onclick="redirecionarParaEndereco('Redmi Note 13 8/256gb')">Comprar</button>
+    </div> 
+  </div>
+</div>
+
+<div class="container">
+  <div class="carousel" id="carousel">
+    
+      <div class="product">
+         <center> <img src="../img/note13.png" alt="Produto 1"></center><br><br>
+         <h2>Redmi Note 13 6/256gb</h2>
+         <p>Lacrado</p>
+         <span class="price">R$1200,00</span>
+          <button onclick="redirecionarParaEndereco('Redmi Note 13 6/256gb')">Comprar</button>
+      </div>
+     <div class="product">
+      <center> <img src="../img/13c128.png" alt="Produto 2"></center><br><br>
+       <h2>Redmi 13 C 8/256gb</h2>
+       <p>Lacrado</p>
+       <span class="price">R$1200,00</span>
+       <button onclick="redirecionarParaEndereco('Redmi 13 C 8/256gb')">Comprar</button>
+   </div>
+      <div class="product">
+        <center> <img src="../img/13c128.png" alt="Produto 2"></center><br><br>
+         <h2>Redmi 13 C 4/256gb</h2>
+         <p>Lacrado</p>
+         <span class="price">R$1000,00</span>
+         <button onclick="redirecionarParaEndereco('Redmi 13 C 4/256gb')">Comprar</button>
+     </div>
+  
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="carousel" id="carousel">
+    
+    <div class="product">
+      <center> <img src="../img/13c128.png" alt="Produto 2"></center><br><br>
+       <h2>Redmi 13 C 4/128gb</h2>
+       <p>Lacrado</p>
+       <span class="price">R$900,00</span>
+       <button onclick="redirecionarParaEndereco('Redmi 13 C 4/128gb')">Comprar</button>
+   </div>
+
+
+  </div>
+</div>
+
+
+
+
+<script>
+  
+  function scrollCarousel(event) {
+      const carousel = document.getElementById('carousel');
+      carousel.scrollLeft += event.deltaY;
+  }
+
+  
+  document.getElementById('carousel').addEventListener('wheel', scrollCarousel);
+</script>
+
+<script>
+function redirecionarParaEndereco(nomeProduto) {
+    // Aqui você pode redirecionar para a página onde o cliente pode fornecer o endereço
+    // Substitua "endereco.html" pelo nome da sua página de endereço
+    window.location.href = "../pages/endereco.html?produto=" + encodeURIComponent(nomeProduto);
+}
+</script>
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-info">
+          <p>Endereço: <a href="http://maps.app.goo.gl/X1QmHi3awGj8RHcS8" target="_blank" rel="noopener noreferrer">Avenida Getúlio Vargas, 370,Centro.</a><br>
+          Paulo Afonso - BA</p>
+          <p>Siga-nos: <a href="https://www.instagram.com/cleitoncel/">@cleitoncel</a></p>
+      </div>
+      <div class="footer-payment">
+          <p>Formas de Pagamento:</p><br>
+          <ul>
+              <li><a href="#"><img src="../img/visa.jpeg" alt="Visa"></a></li>
+              <li><a href="#"><img src="../img/mastercard.png" alt="Mastercard"></a></li>
+              <li><a href="#"><img src="../img/elo.png" alt="Elo"></a></li>
+              <li><a href="#"><img src="../img/pix.png" alt="Pix"></a></li>
+          </ul>
+      </div>
+      <div class="footer-reputation">
+          <p>Somos uma loja confiável, com produtos de qualidade e atendimento excepcional!</p>
+          <p>Venha nos visitar!</p>
+      </div>
+  </div>
+  </footer>
+</body>
+</html>
